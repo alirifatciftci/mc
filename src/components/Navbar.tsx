@@ -6,10 +6,10 @@ const Navbar = () => {
   const location = useLocation();
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Corporate', path: '/corporate' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Ana Sayfa', path: '/' },
+    { name: 'Kurumsal', path: '/corporate' },
+    { name: 'Projeler', path: '/projects' },
+    { name: 'İletişim', path: '/contact' }
   ];
 
   return (

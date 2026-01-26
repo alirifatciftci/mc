@@ -35,11 +35,11 @@ const Projects = () => {
           className="text-center mb-20"
         >
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">
-            Our Projects
+            Projelerimiz
           </h1>
           <div className="h-1 w-24 bg-orange-600 mx-auto mb-6" />
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Explore our portfolio of exceptional constructions that redefine modern architecture and luxury living.
+            Modern mimariyi ve lüks yaşamı yeniden tanımlayan olağanüstü inşaat portföyümüzü keşfedin.
           </p>
         </motion.div>
 
@@ -65,7 +65,7 @@ const Projects = () => {
 
                 <div className="absolute top-6 right-6">
                   <span className={`px-4 py-2 text-xs uppercase tracking-wider font-semibold ${
-                    project.status === 'Completed'
+                    project.status === 'Tamamlandı'
                       ? 'bg-orange-600/90 text-white'
                       : 'bg-white/20 text-white backdrop-blur-sm'
                   }`}>
@@ -88,7 +88,7 @@ const Projects = () => {
                 </p>
                 <div className="flex items-center text-orange-600 group-hover:translate-x-2 transition-transform duration-300">
                   <span className="text-sm uppercase tracking-wider font-semibold mr-2">
-                    View Details
+                    Detayları Görüntüle
                   </span>
                   <ArrowRight className="w-4 h-4" />
                 </div>

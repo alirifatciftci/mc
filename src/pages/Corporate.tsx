@@ -5,23 +5,23 @@ const Corporate = () => {
   const values = [
     {
       icon: Award,
-      title: 'Excellence',
-      description: 'We strive for perfection in every project, ensuring the highest quality standards.'
+      title: 'Mükemmellik',
+      description: 'Her projede mükemmelliği hedefliyor, en yüksek kalite standartlarını sağlıyoruz.'
     },
     {
       icon: Users,
-      title: 'Collaboration',
-      description: 'Working closely with clients and partners to bring visionary projects to life.'
+      title: 'İşbirliği',
+      description: 'Vizyoner projeleri hayata geçirmek için müşteriler ve ortaklarla yakın çalışıyoruz.'
     },
     {
       icon: Target,
-      title: 'Innovation',
-      description: 'Embracing cutting-edge technology and modern construction methodologies.'
+      title: 'İnovasyon',
+      description: 'Son teknoloji ve modern inşaat metodolojilerini benimsiyoruz.'
     },
     {
       icon: Shield,
-      title: 'Integrity',
-      description: 'Building trust through transparency, reliability, and ethical business practices.'
+      title: 'Dürüstlük',
+      description: 'Şeffaflık, güvenilirlik ve etik iş uygulamalarıyla güven inşa ediyoruz.'
     }
   ];
 
@@ -42,7 +42,7 @@ const Corporate = () => {
           className="relative z-10 text-center px-6"
         >
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
-            About MÇ İNŞAAT
+            MÇ İNŞAAT Hakkında
           </h1>
           <div className="h-1 w-24 bg-orange-600 mx-auto" />
         </motion.div>
@@ -58,10 +58,10 @@ const Corporate = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-              Our Vision
+              Vizyonumuz
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed">
-              To be the leading force in transforming skylines and shaping the future of urban development through innovative construction practices, sustainable design, and unwavering commitment to excellence.
+              Yenilikçi inşaat uygulamaları, sürdürülebilir tasarım ve mükemmelliğe olan sarsılmaz bağlılığımızla siluetleri dönüştürmede ve kentsel gelişimin geleceğini şekillendirmede öncü güç olmak.
             </p>
           </motion.div>
 
@@ -74,13 +74,13 @@ const Corporate = () => {
           >
             <div>
               <h3 className="text-3xl font-bold text-white mb-6 tracking-tight">
-                Who We Are
+                Biz Kimiz
               </h3>
               <p className="text-gray-400 leading-relaxed mb-4">
-                Founded over two decades ago, MÇ İNŞAAT has established itself as a premier construction company specializing in luxury residential and commercial developments. Our journey began with a simple vision: to create structures that inspire and endure.
+                Yirmi yılı aşkın bir süre önce kurulan MÇ İNŞAAT, lüks konut ve ticari gelişmelerde uzmanlaşmış önde gelen bir inşaat şirketi olarak kendini kanıtlamıştır. Yolculuğumuz basit bir vizyonla başladı: ilham veren ve kalıcı yapılar yaratmak.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                Today, we stand proud with a portfolio of over 150 completed projects, each a testament to our dedication to architectural excellence and innovative engineering solutions.
+                Bugün, her biri mimari mükemmelliğe ve yenilikçi mühendislik çözümlerine olan bağlılığımızın bir kanıtı olan 150'den fazla tamamlanmış projeyle gururla ayaktayız.
               </p>
             </div>
             <div className="relative h-96 rounded-sm overflow-hidden">
@@ -104,7 +104,7 @@ const Corporate = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-              Our Core Values
+              Temel Değerlerimiz
             </h2>
             <div className="h-1 w-24 bg-orange-600 mx-auto" />
           </motion.div>
@@ -143,21 +143,21 @@ const Corporate = () => {
           >
             <div className="mb-6">
               <span className="text-orange-600 text-sm uppercase tracking-widest font-semibold">
-                CEO Message
+                CEO Mesajı
               </span>
             </div>
             <h2 className="text-3xl font-bold text-white mb-6 tracking-tight">
-              A Message from Our Leadership
+              Yönetimimizden Bir Mesaj
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              "At MÇ İNŞAAT, we believe that construction is not merely about erecting buildings—it's about creating spaces where people live, work, and thrive. Every project we undertake is approached with meticulous attention to detail and an unwavering commitment to quality."
+              "MÇ İNŞAAT'ta, inşaatın sadece bina dikmekle ilgili olmadığına inanıyoruz—insanların yaşadığı, çalıştığı ve geliştiği alanlar yaratmakla ilgilidir. Üstlendiğimiz her proje, titiz detay odaklılığı ve kaliteye olan sarsılmaz bağlılıkla ele alınır."
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
-              "Our success is measured not just by the structures we build, but by the lasting relationships we forge with our clients and the positive impact we make on the communities we serve."
+              "Başarımız sadece inşa ettiğimiz yapılarla değil, müşterilerimizle kurduğumuz kalıcı ilişkiler ve hizmet verdiğimiz topluluklara yaptığımız olumlu etkiyle ölçülür."
             </p>
             <div>
               <div className="text-white font-bold text-xl mb-1">Mehmet Çelik</div>
-              <div className="text-orange-600 text-sm uppercase tracking-wider">Founder & CEO</div>
+              <div className="text-orange-600 text-sm uppercase tracking-wider">Kurucu & CEO</div>
             </div>
           </motion.div>
         </div>

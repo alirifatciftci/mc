@@ -69,7 +69,7 @@ const Home = () => {
               className="space-y-4"
             >
               <p className="text-xl md:text-2xl text-gray-300 tracking-widest uppercase">
-                Constructing the Future of Luxury
+                Lüksün Geleceğini İnşa Ediyoruz
               </p>
               <div className="h-px w-32 bg-orange-600 mx-auto" />
             </motion.div>
@@ -114,15 +114,15 @@ const Home = () => {
           >
             <div className="text-center">
               <div className="text-5xl font-bold text-orange-600 mb-4">25+</div>
-              <div className="text-gray-400 uppercase tracking-wider text-sm">Years of Excellence</div>
+              <div className="text-gray-400 uppercase tracking-wider text-sm">Yıllık Mükemmellik</div>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold text-orange-600 mb-4">150+</div>
-              <div className="text-gray-400 uppercase tracking-wider text-sm">Projects Completed</div>
+              <div className="text-gray-400 uppercase tracking-wider text-sm">Tamamlanan Proje</div>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold text-orange-600 mb-4">1M+</div>
-              <div className="text-gray-400 uppercase tracking-wider text-sm">Square Meters Built</div>
+              <div className="text-gray-400 uppercase tracking-wider text-sm">Metrekare İnşaat</div>
             </div>
           </motion.div>
         </div>
@@ -137,10 +137,10 @@ const Home = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-              Building Tomorrow's Landmarks
+              Yarının Simge Yapılarını İnşa Ediyoruz
             </h2>
             <p className="text-gray-400 text-lg leading-relaxed">
-              At MÇ İNŞAAT, we don't just construct buildings; we create architectural masterpieces that stand the test of time. With a legacy of excellence spanning over two decades, we bring visionary designs to life with unparalleled craftsmanship and attention to detail.
+              MÇ İNŞAAT olarak sadece bina inşa etmiyoruz; zamanın testine dayanacak mimari şaheserler yaratıyoruz. Yirmi yılı aşkın mükemmellik mirasımızla, vizyoner tasarımları benzersiz işçilik ve detaylara gösterilen özenle hayata geçiriyoruz.
             </p>
           </motion.div>
         </div>

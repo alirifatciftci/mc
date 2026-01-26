@@ -25,18 +25,18 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Phone',
+      title: 'Telefon',
       details: ['+90 212 555 0123', '+90 212 555 0124']
     },
     {
       icon: Mail,
-      title: 'Email',
+      title: 'E-posta',
       details: ['info@mcinsaat.com', 'projects@mcinsaat.com']
     },
     {
       icon: MapPin,
-      title: 'Address',
-      details: ['Maslak Mahallesi, Büyükdere Caddesi', 'No: 255, Sarıyer, İstanbul, Turkey']
+      title: 'Adres',
+      details: ['Maslak Mahallesi, Büyükdere Caddesi', 'No: 255, Sarıyer, İstanbul, Türkiye']
     }
   ];
 
@@ -57,7 +57,7 @@ const Contact = () => {
           className="relative z-10 text-center px-6"
         >
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
-            Get In Touch
+            İletişime Geçin
           </h1>
           <div className="h-1 w-24 bg-orange-600 mx-auto" />
         </motion.div>
@@ -75,10 +75,10 @@ const Contact = () => {
             >
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6 tracking-tight">
-                  Let's Start a Conversation
+                  Hadi Konuşmaya Başlayalım
                 </h2>
                 <p className="text-gray-400 leading-relaxed">
-                  Whether you're planning a new project or seeking consultation, our team is ready to assist you in bringing your vision to life.
+                  Yeni bir proje planlıyor veya danışmanlık arıyor olun, ekibimiz vizyonunuzu hayata geçirmenizde size yardımcı olmaya hazırdır.
                 </p>
               </div>
 
@@ -108,11 +108,11 @@ const Contact = () => {
               </div>
 
               <div className="pt-8">
-                <h3 className="text-white font-semibold mb-4">Business Hours</h3>
+                <h3 className="text-white font-semibold mb-4">Çalışma Saatleri</h3>
                 <div className="space-y-2 text-gray-400 text-sm">
-                  <p>Monday - Friday: 09:00 - 18:00</p>
-                  <p>Saturday: 10:00 - 16:00</p>
-                  <p>Sunday: Closed</p>
+                  <p>Pazartesi - Cuma: 09:00 - 18:00</p>
+                  <p>Cumartesi: 10:00 - 16:00</p>
+                  <p>Pazar: Kapalı</p>
                 </div>
               </div>
             </motion.div>
@@ -128,7 +128,7 @@ const Contact = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-gray-400 text-sm mb-2 uppercase tracking-wider">
-                      Full Name
+                      Ad Soyad
                     </label>
                     <input
                       type="text"
@@ -142,7 +142,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-gray-400 text-sm mb-2 uppercase tracking-wider">
-                      Email Address
+                      E-posta Adresi
                     </label>
                     <input
                       type="email"
@@ -158,7 +158,7 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="phone" className="block text-gray-400 text-sm mb-2 uppercase tracking-wider">
-                    Phone Number
+                    Telefon Numarası
                   </label>
                   <input
                     type="tel"
@@ -172,7 +172,7 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="message" className="block text-gray-400 text-sm mb-2 uppercase tracking-wider">
-                    Your Message
+                    Mesajınız
                   </label>
                   <textarea
                     id="message"
@@ -191,7 +191,7 @@ const Contact = () => {
                   whileTap={{ scale: 0.98 }}
                   className="w-full bg-orange-600 text-white py-4 px-8 font-semibold uppercase tracking-wider flex items-center justify-center space-x-2 hover:bg-orange-700 transition-colors duration-300"
                 >
-                  <span>Send Message</span>
+                  <span>Mesaj Gönder</span>
                   <Send className="w-4 h-4" />
                 </motion.button>
               </form>
