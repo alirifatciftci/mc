@@ -26,12 +26,12 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Telefon',
-      details: ['+90 212 555 0123', '+90 212 555 0124']
+      details: ['0507 102 7665']
     },
     {
       icon: Mail,
       title: 'E-posta',
-      details: ['info@mcinsaat.com', 'projects@mcinsaat.com']
+      details: ['info@alfainsaat.com']
     },
     {
       icon: MapPin,

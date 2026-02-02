@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import namelogo from '../assets/namelogo.png';
 
 const heroImages = [
   {
@@ -53,25 +54,22 @@ const Home = () => {
         </AnimatePresence>
 
         <div className="relative z-10 h-full flex items-center justify-center">
-          <div className="text-center px-6">
-            <motion.h1
+          <div className="text-center px-6 max-w-6xl mx-auto">
+            <motion.div
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 0.5, ease: 'easeOut' }}
-              className="text-6xl md:text-8xl font-bold text-white tracking-tight mb-6"
+              className="flex flex-col items-center"
             >
-              MÇ İNŞAAT
-            </motion.h1>
-            <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.8, ease: 'easeOut' }}
-              className="space-y-4"
-            >
-              <p className="text-xl md:text-2xl text-gray-300 tracking-widest uppercase">
-                Lüksün Geleceğini İnşa Ediyoruz
-              </p>
-              <div className="h-px w-32 bg-orange-600 mx-auto" />
+              <div className="relative">
+                <div className="absolute inset-0 bg-orange-600/10 blur-3xl rounded-full"></div>
+                <img 
+                  src={namelogo} 
+                  alt="ALFA İNŞAAT" 
+                  className="relative w-96 md:w-[500px] h-auto drop-shadow-2xl"
+                />
+              </div>
+          
             </motion.div>
           </div>
         </div>
@@ -140,7 +138,7 @@ const Home = () => {
               Yarının Simge Yapılarını İnşa Ediyoruz
             </h2>
             <p className="text-gray-400 text-lg leading-relaxed">
-              MÇ İNŞAAT olarak sadece bina inşa etmiyoruz; zamanın testine dayanacak mimari şaheserler yaratıyoruz. Yirmi yılı aşkın mükemmellik mirasımızla, vizyoner tasarımları benzersiz işçilik ve detaylara gösterilen özenle hayata geçiriyoruz.
+              ALFA İNŞAAT olarak sadece bina inşa etmiyoruz; zamanın testine dayanacak mimari şaheserler yaratıyoruz. Yirmi yılı aşkın mükemmellik mirasımızla, vizyoner tasarımları benzersiz işçilik ve detaylara gösterilen özenle hayata geçiriyoruz.
             </p>
           </motion.div>
         </div>

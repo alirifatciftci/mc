@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Building2 } from 'lucide-react';
+import alfalogo from '../assets/alfalog.png';
 
 const Navbar = () => {
   const location = useLocation();
@@ -21,11 +21,12 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-3 group">
-            <Building2 className="w-8 h-8 text-orange-600 transition-transform group-hover:scale-110 duration-300" />
-            <span className="text-2xl font-bold tracking-wider text-white">
-              MÇ İNŞAAT
-            </span>
+          <Link to="/" className="flex items-center group">
+            <img 
+              src={alfalogo} 
+              alt="ALFA İNŞAAT Logo" 
+              className="h-12 w-auto transition-transform group-hover:scale-110 duration-300"
+            />
           </Link>
 
           <div className="flex items-center space-x-8">

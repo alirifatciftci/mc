@@ -42,7 +42,7 @@ const Corporate = () => {
           className="relative z-10 text-center px-6"
         >
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
-            MÇ İNŞAAT Hakkında
+            ALFA İNŞAAT Hakkında
           </h1>
           <div className="h-1 w-24 bg-orange-600 mx-auto" />
         </motion.div>
@@ -77,7 +77,7 @@ const Corporate = () => {
                 Biz Kimiz
               </h3>
               <p className="text-gray-400 leading-relaxed mb-4">
-                Yirmi yılı aşkın bir süre önce kurulan MÇ İNŞAAT, lüks konut ve ticari gelişmelerde uzmanlaşmış önde gelen bir inşaat şirketi olarak kendini kanıtlamıştır. Yolculuğumuz basit bir vizyonla başladı: ilham veren ve kalıcı yapılar yaratmak.
+                Yirmi yılı aşkın bir süre önce kurulan ALFA İNŞAAT, konut ve ticari gelişmelerde uzmanlaşmış önde gelen bir inşaat şirketi olarak kendini kanıtlamıştır. Yolculuğumuz basit bir vizyonla başladı: ilham veren ve kalıcı yapılar yaratmak.
               </p>
               <p className="text-gray-400 leading-relaxed">
                 Bugün, her biri mimari mükemmelliğe ve yenilikçi mühendislik çözümlerine olan bağlılığımızın bir kanıtı olan 150'den fazla tamamlanmış projeyle gururla ayaktayız.
@@ -150,7 +150,7 @@ const Corporate = () => {
               Yönetimimizden Bir Mesaj
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              "MÇ İNŞAAT'ta, inşaatın sadece bina dikmekle ilgili olmadığına inanıyoruz—insanların yaşadığı, çalıştığı ve geliştiği alanlar yaratmakla ilgilidir. Üstlendiğimiz her proje, titiz detay odaklılığı ve kaliteye olan sarsılmaz bağlılıkla ele alınır."
+              "ALFA İNŞAAT'ta, inşaatın sadece bina dikmekle ilgili olmadığına inanıyoruz—insanların yaşadığı, çalıştığı ve geliştiği alanlar yaratmakla ilgilidir. Üstlendiğimiz her proje, titiz detay odaklılığı ve kaliteye olan sarsılmaz bağlılıkla ele alınır."
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               "Başarımız sadece inşa ettiğimiz yapılarla değil, müşterilerimizle kurduğumuz kalıcı ilişkiler ve hizmet verdiğimiz topluluklara yaptığımız olumlu etkiyle ölçülür."
