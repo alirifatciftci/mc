@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import alfalogo from '../assets/alfalog.png';
+import salmazlogo from '../assets/salmazlogo.png';
 
 const Navbar = () => {
   const location = useLocation();
@@ -8,6 +8,7 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Ana Sayfa', path: '/' },
     { name: 'Kurumsal', path: '/corporate' },
+    { name: 'Hizmetler', path: '/services' },
     { name: 'Projeler', path: '/projects' },
     { name: 'İletişim', path: '/contact' }
   ];
@@ -23,9 +24,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center group">
             <img 
-              src={alfalogo} 
-              alt="ALFA İNŞAAT Logo" 
-              className="h-12 w-auto transition-transform group-hover:scale-110 duration-300"
+              src={salmazlogo} 
+              alt="SALMAZLAR İNŞAAT Logo" 
+              className="h-12 w-auto transition-transform group-hover:scale-110 duration-300 brightness-0 invert"
             />
           </Link>
 

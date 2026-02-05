@@ -42,7 +42,7 @@ const Corporate = () => {
           className="relative z-10 text-center px-6"
         >
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
-            ALFA İNŞAAT Hakkında
+            SALMAZLAR İNŞAAT Hakkında
           </h1>
           <div className="h-1 w-24 bg-orange-600 mx-auto" />
         </motion.div>
@@ -55,14 +55,97 @@ const Corporate = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tight text-center">
               Vizyonumuz
             </h2>
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <div className="h-1 w-24 bg-orange-600 mx-auto mb-8" />
+            <p className="text-gray-300 text-lg leading-relaxed mb-8 text-center">
               Yenilikçi inşaat uygulamaları, sürdürülebilir tasarım ve mükemmelliğe olan sarsılmaz bağlılığımızla siluetleri dönüştürmede ve kentsel gelişimin geleceğini şekillendirmede öncü güç olmak.
             </p>
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <div className="bg-black p-6 border-l-4 border-orange-600">
+                <h3 className="text-xl font-bold text-white mb-3">Sürdürülebilirlik</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Çevre dostu malzemeler ve enerji verimli çözümlerle gelecek nesillere yaşanabilir bir dünya bırakmayı hedefliyoruz.
+                </p>
+              </div>
+              <div className="bg-black p-6 border-l-4 border-orange-600">
+                <h3 className="text-xl font-bold text-white mb-3">Yenilikçilik</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Modern teknolojileri ve yenilikçi inşaat yöntemlerini projelerimize entegre ederek sektörde öncü olmayı sürdürüyoruz.
+                </p>
+              </div>
+              <div className="bg-black p-6 border-l-4 border-orange-600">
+                <h3 className="text-xl font-bold text-white mb-3">Güvenilirlik</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Müşterilerimize verdiğimiz sözleri tutarak, kaliteli ve zamanında teslim edilen projelerle güven inşa ediyoruz.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tight text-center">
+              Misyonumuz
+            </h2>
+            <div className="h-1 w-24 bg-orange-600 mx-auto mb-8" />
+            <p className="text-gray-300 text-lg leading-relaxed text-center mb-8">
+              İnşaat sektöründe kalite, güvenilirlik ve müşteri memnuniyetini ön planda tutarak, yaşam alanlarını dönüştürmek ve topluma değer katmak.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-black p-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-orange-600 mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-white font-semibold mb-2">Müşteri Odaklılık</h4>
+                    <p className="text-gray-400 text-sm">
+                      Her projeyi müşterilerimizin ihtiyaçları ve beklentileri doğrultusunda şekillendiriyoruz.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-black p-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-orange-600 mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-white font-semibold mb-2">Kalite Standartları</h4>
+                    <p className="text-gray-400 text-sm">
+                      Uluslararası kalite standartlarına uygun malzeme ve işçilik garantisi sunuyoruz.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-black p-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-orange-600 mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-white font-semibold mb-2">Toplumsal Sorumluluk</h4>
+                    <p className="text-gray-400 text-sm">
+                      Çevreye ve topluma duyarlı projeler üreterek sosyal sorumluluğumuzu yerine getiriyoruz.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-black p-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-orange-600 mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-white font-semibold mb-2">Sürekli Gelişim</h4>
+                    <p className="text-gray-400 text-sm">
+                      Ekibimizi sürekli eğiterek ve sektördeki yenilikleri takip ederek kendimizi geliştiriyoruz.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </motion.div>
 
           <motion.div
@@ -77,7 +160,7 @@ const Corporate = () => {
                 Biz Kimiz
               </h3>
               <p className="text-gray-400 leading-relaxed mb-4">
-                Yirmi yılı aşkın bir süre önce kurulan ALFA İNŞAAT, konut ve ticari gelişmelerde uzmanlaşmış önde gelen bir inşaat şirketi olarak kendini kanıtlamıştır. Yolculuğumuz basit bir vizyonla başladı: ilham veren ve kalıcı yapılar yaratmak.
+                Yirmi yılı aşkın bir süre önce kurulan SALMAZLAR İNŞAAT, konut ve ticari gelişmelerde uzmanlaşmış önde gelen bir inşaat şirketi olarak kendini kanıtlamıştır. Yolculuğumuz basit bir vizyonla başladı: ilham veren ve kalıcı yapılar yaratmak.
               </p>
               <p className="text-gray-400 leading-relaxed">
                 Bugün, her biri mimari mükemmelliğe ve yenilikçi mühendislik çözümlerine olan bağlılığımızın bir kanıtı olan 150'den fazla tamamlanmış projeyle gururla ayaktayız.
@@ -129,37 +212,6 @@ const Corporate = () => {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="bg-zinc-900 py-24 px-6">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="bg-black p-12 border-l-4 border-orange-600"
-          >
-            <div className="mb-6">
-              <span className="text-orange-600 text-sm uppercase tracking-widest font-semibold">
-                CEO Mesajı
-              </span>
-            </div>
-            <h2 className="text-3xl font-bold text-white mb-6 tracking-tight">
-              Yönetimimizden Bir Mesaj
-            </h2>
-            <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              "ALFA İNŞAAT'ta, inşaatın sadece bina dikmekle ilgili olmadığına inanıyoruz—insanların yaşadığı, çalıştığı ve geliştiği alanlar yaratmakla ilgilidir. Üstlendiğimiz her proje, titiz detay odaklılığı ve kaliteye olan sarsılmaz bağlılıkla ele alınır."
-            </p>
-            <p className="text-gray-300 text-lg leading-relaxed mb-8">
-              "Başarımız sadece inşa ettiğimiz yapılarla değil, müşterilerimizle kurduğumuz kalıcı ilişkiler ve hizmet verdiğimiz topluluklara yaptığımız olumlu etkiyle ölçülür."
-            </p>
-            <div>
-              <div className="text-white font-bold text-xl mb-1">Mehmet Çelik</div>
-              <div className="text-orange-600 text-sm uppercase tracking-wider">Kurucu & CEO</div>
-            </div>
-          </motion.div>
         </div>
       </section>
     </div>

@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import Corporate from './pages/Corporate';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Services from './pages/Services';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -17,6 +18,7 @@ function AnimatedRoutes() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<PageTransition><Home /></PageTransition>} />
         <Route path="/corporate" element={<PageTransition><Corporate /></PageTransition>} />
+        <Route path="/services" element={<PageTransition><Services /></PageTransition>} />
         <Route path="/projects" element={<PageTransition><Projects /></PageTransition>} />
         <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
       </Routes>

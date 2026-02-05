@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send } from 'lucide-react';
 import { useState } from 'react';
 
 const Contact = () => {
@@ -12,7 +12,23 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    
+    // E-posta içeriğini hazırla
+    const subject = `İletişim Formu - ${formData.name}`;
+    const body = `
+Ad Soyad: ${formData.name}
+E-posta: ${formData.email}
+Telefon: ${formData.phone || 'Belirtilmedi'}
+
+Mesaj:
+${formData.message}
+    `.trim();
+    
+    // mailto linkini oluştur
+    const mailtoLink = `mailto:infosalmazlarinsaat@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // E-posta programını aç
+    window.location.href = mailtoLink;
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -24,19 +40,16 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: Phone,
-      title: 'Telefon',
-      details: ['0507 102 7665']
-    },
-    {
       icon: Mail,
       title: 'E-posta',
-      details: ['info@alfainsaat.com']
+      details: ['infosalmazlarinsaat@gmail.com'],
+      link: 'mailto:infosalmazlarinsaat@gmail.com'
     },
     {
       icon: MapPin,
       title: 'Adres',
-      details: ['Maslak Mahallesi, Büyükdere Caddesi', 'No: 255, Sarıyer, İstanbul, Türkiye']
+      details: ['YENİŞEHİR MAH. OSMANLI BUL.', 'ÇAĞDAŞ CENTER SİTESİ B BLOK NO: 10/1', 'İÇ KAPI NO: 12 PENDİK / İSTANBUL'],
+      link: 'https://www.google.com/maps/search/?api=1&query=YENİŞEHİR+MAH.+OSMANLI+BUL.+ÇAĞDAŞ+CENTER+SİTESİ+B+BLOK+NO:+10/1+İÇ+KAPI+NO:+12+PENDİK+İSTANBUL'
     }
   ];
 
@@ -65,17 +78,17 @@ const Contact = () => {
 
       <section className="bg-zinc-900 py-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-5 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="lg:col-span-2 space-y-8"
+              className="space-y-8"
             >
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6 tracking-tight">
-                  Hadi Konuşmaya Başlayalım
+                  İletişim Bilgileri
                 </h2>
                 <p className="text-gray-400 leading-relaxed">
                   Yeni bir proje planlıyor veya danışmanlık arıyor olun, ekibimiz vizyonunuzu hayata geçirmenizde size yardımcı olmaya hazırdır.
@@ -97,11 +110,27 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="text-white font-semibold mb-2">{info.title}</h3>
-                      {info.details.map((detail, idx) => (
-                        <p key={idx} className="text-gray-400 text-sm">
-                          {detail}
-                        </p>
-                      ))}
+                      {info.title === 'Adres' ? (
+                        <a
+                          href={info.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-400 text-sm hover:text-orange-600 transition-colors duration-300"
+                        >
+                          {info.details.map((detail, idx) => (
+                            <p key={idx}>{detail}</p>
+                          ))}
+                        </a>
+                      ) : (
+                        <a
+                          href={info.link}
+                          className="text-gray-400 text-sm hover:text-orange-600 transition-colors duration-300 block"
+                        >
+                          {info.details.map((detail, idx) => (
+                            <p key={idx}>{detail}</p>
+                          ))}
+                        </a>
+                      )}
                     </div>
                   </motion.div>
                 ))}
@@ -115,6 +144,34 @@ const Contact = () => {
                   <p>Pazar: Kapalı</p>
                 </div>
               </div>
+
+              {/* Harita Kartı */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="bg-black border border-zinc-800 overflow-hidden"
+              >
+                <div className="h-64 w-full">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.4567890123!2d29.2345678!3d40.8765432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac7f7b0f0f0f0%3A0x0!2sYeni%C5%9Fehir%20Mah.%20Osmanl%C4%B1%20Bul.%20Pendik%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1234567890"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="SALMAZLAR İNŞAAT Ofis Konumu"
+                    className="grayscale"
+                  ></iframe>
+                </div>
+                <div className="p-4 bg-zinc-900">
+                  <p className="text-gray-400 text-xs">
+                    Yenişehir Mah. Osmanlı Bul. Çağdaş Center Sitesi B Blok No: 10/1 İç Kapı No: 12 Pendik / İstanbul
+                  </p>
+                </div>
+              </motion.div>
             </motion.div>
 
             <motion.div
@@ -122,7 +179,6 @@ const Contact = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="lg:col-span-3"
             >
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
@@ -180,7 +236,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows={6}
+                    rows={8}
                     className="w-full bg-black border border-zinc-700 text-white px-4 py-4 focus:outline-none focus:border-orange-600 transition-colors duration-300 resize-none"
                   />
                 </div>

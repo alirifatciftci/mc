@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Instagram, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import namelogo from '../assets/namelogo.png';
+import salmazlarnamelogo from '../assets/salmazlarnamelogo.png';
 
 const Footer = () => {
   const services = [
@@ -16,6 +16,7 @@ const Footer = () => {
   const quickLinks = [
     { name: 'Ana Sayfa', path: '/' },
     { name: 'Kurumsal', path: '/corporate' },
+    { name: 'Hizmetler', path: '/services' },
     { name: 'Projeler', path: '/projects' },
     { name: 'İletişim', path: '/contact' }
   ];
@@ -50,28 +51,38 @@ const Footer = () => {
       {/* Alt Kısım - Tek Satır Bilgiler */}
       <div className="bg-zinc-900 py-12 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+          <div className="flex flex-col lg:flex-row items-start lg:items-start justify-between gap-8">
             {/* Logo ve Sosyal Medya */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="flex flex-col items-start gap-4 min-w-[180px]"
+              className="flex flex-col items-start gap-4 w-full lg:w-auto lg:min-w-[220px]"
             >
               <img 
-                src={namelogo} 
-                alt="ALFA İNŞAAT" 
-                className="w-44 h-auto object-contain"
+                src={salmazlarnamelogo} 
+                alt="SALMAZLAR İNŞAAT" 
+                className="w-44 h-auto object-contain brightness-0 invert"
               />
               <p className="text-gray-400 text-sm max-w-xs">
-                ALFA İNŞAAT - İnşaat ve Mimari
+                SALMAZLAR İNŞAAT - İnşaat ve Mimari
               </p>
               <div className="flex space-x-3">
-                <a href="#" className="w-9 h-9 bg-white/5 hover:bg-orange-600 flex items-center justify-center transition-colors duration-300 rounded-full">
+                <a 
+                  href="https://www.instagram.com/salmazlarinsaat" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 bg-white/5 hover:bg-orange-600 flex items-center justify-center transition-colors duration-300 rounded-full"
+                >
                   <Instagram className="w-4 h-4 text-white" />
                 </a>
-                <a href="#" className="w-9 h-9 bg-white/5 hover:bg-orange-600 flex items-center justify-center transition-colors duration-300 rounded-full">
+                <a 
+                  href="https://www.linkedin.com/in/salmazlar-insaat-19b9613aa" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 bg-white/5 hover:bg-orange-600 flex items-center justify-center transition-colors duration-300 rounded-full"
+                >
                   <Linkedin className="w-4 h-4 text-white" />
                 </a>
               </div>
@@ -83,21 +94,25 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
+              className="w-full lg:w-auto"
             >
               <h4 className="text-white font-bold text-base mb-3 tracking-tight">
                 Merkez Ofis
               </h4>
               <div className="space-y-1 text-gray-400 text-sm">
-                <a href="tel:+905071027665" className="block hover:text-orange-600 transition-colors duration-300">
-                  0507 102 7665
+                <a href="mailto:infosalmazlarinsaat@gmail.com" className="block hover:text-orange-600 transition-colors duration-300">
+                  infosalmazlarinsaat@gmail.com
                 </a>
-                <a href="mailto:info@alfainsaat.com" className="block hover:text-orange-600 transition-colors duration-300">
-                  info@alfainsaat.com
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=YENİŞEHİR+MAH.+OSMANLI+BUL.+ÇAĞDAŞ+CENTER+SİTESİ+B+BLOK+NO:+10/1+İÇ+KAPI+NO:+12+PENDİK+İSTANBUL"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block hover:text-orange-600 transition-colors duration-300 leading-relaxed"
+                >
+                  YENİŞEHİR MAH. OSMANLI BUL.<br />
+                  ÇAĞDAŞ CENTER SİTESİ B BLOK NO: 10/1<br />
+                  İÇ KAPI NO: 12 PENDİK / İSTANBUL
                 </a>
-                <p className="leading-relaxed">
-                  Maslak Mahallesi, Büyükdere Caddesi No: 255<br />
-                  Sarıyer, İstanbul, Türkiye
-                </p>
               </div>
             </motion.div>
 
@@ -107,6 +122,7 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
+              className="w-full lg:w-auto"
             >
               <h4 className="text-white font-bold text-base mb-3 tracking-tight">
                 Hızlı Erişim
@@ -131,6 +147,7 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
+              className="w-full lg:w-auto"
             >
               <h4 className="text-white font-bold text-base mb-3 tracking-tight">
                 Hizmetlerimiz
@@ -138,12 +155,12 @@ const Footer = () => {
               <ul className="space-y-1">
                 {services.slice(0, 4).map((service, index) => (
                   <li key={index}>
-                    <a
-                      href="#"
+                    <Link
+                      to="/services"
                       className="text-gray-400 text-sm hover:text-orange-600 transition-colors duration-300 block"
                     >
                       {service}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -155,6 +172,7 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
+              className="w-full lg:w-auto"
             >
               <h4 className="text-white font-bold text-base mb-3 tracking-tight">
                 Çalışma Saatleri
@@ -172,21 +190,18 @@ const Footer = () => {
       {/* En Alt - Copyright */}
       <div className="bg-black py-6 px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="flex flex-col items-center space-y-2">
             <p className="text-gray-500 text-sm">
-              © {new Date().getFullYear()} ALFA İNŞAAT. Tüm hakları saklıdır.
+              © {new Date().getFullYear()} SALMAZLAR İNŞAAT. Tüm hakları saklıdır.
             </p>
-            <div className="flex space-x-6">
-              <a href="#" className="text-gray-500 text-sm hover:text-orange-600 transition-colors duration-300">
-                Gizlilik Politikası
-              </a>
-              <a href="#" className="text-gray-500 text-sm hover:text-orange-600 transition-colors duration-300">
-                Kullanım Koşulları
-              </a>
-              <a href="#" className="text-gray-500 text-sm hover:text-orange-600 transition-colors duration-300">
-                Çerez Politikası
-              </a>
-            </div>
+            <a 
+              href="https://www.linkedin.com/in/alirifatciftci" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 text-xs hover:text-orange-600 transition-colors duration-300"
+            >
+              Designed by alirifatciftci
+            </a>
           </div>
         </div>
       </div>

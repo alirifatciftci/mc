@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-import namelogo from '../assets/namelogo.png';
+import salmazlarnamelogo from '../assets/salmazlarnamelogo.png';
 
 const heroImages = [
   {
@@ -9,8 +9,8 @@ const heroImages = [
     alt: 'Modern skyscraper'
   },
   {
-    url: 'https://images.unsplash.com/photo-1577495508326-19a1b3cf65b7?w=1920&q=90',
-    alt: 'Luxury architecture'
+    url: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=90',
+    alt: 'Construction site'
   },
   {
     url: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1920&q=90',
@@ -64,8 +64,8 @@ const Home = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-orange-600/10 blur-3xl rounded-full"></div>
                 <img 
-                  src={namelogo} 
-                  alt="ALFA İNŞAAT" 
+                  src={salmazlarnamelogo} 
+                  alt="SALMAZLAR İNŞAAT" 
                   className="relative w-96 md:w-[500px] h-auto drop-shadow-2xl"
                 />
               </div>
@@ -111,16 +111,16 @@ const Home = () => {
             className="grid md:grid-cols-3 gap-12"
           >
             <div className="text-center">
-              <div className="text-5xl font-bold text-orange-600 mb-4">25+</div>
-              <div className="text-gray-400 uppercase tracking-wider text-sm">Yıllık Mükemmellik</div>
+              <div className="text-5xl font-bold text-orange-600 mb-4">10+</div>
+              <div className="text-gray-400 uppercase tracking-wider text-sm">Yıllık Tecrübe</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-orange-600 mb-4">150+</div>
-              <div className="text-gray-400 uppercase tracking-wider text-sm">Tamamlanan Proje</div>
+              <div className="text-5xl font-bold text-orange-600 mb-4">10+</div>
+              <div className="text-gray-400 uppercase tracking-wider text-sm">Aktif Proje</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-orange-600 mb-4">1M+</div>
-              <div className="text-gray-400 uppercase tracking-wider text-sm">Metrekare İnşaat</div>
+              <div className="text-5xl font-bold text-orange-600 mb-4">100%</div>
+              <div className="text-gray-400 uppercase tracking-wider text-sm">Müşteri Memnuniyeti</div>
             </div>
           </motion.div>
         </div>
@@ -138,7 +138,7 @@ const Home = () => {
               Yarının Simge Yapılarını İnşa Ediyoruz
             </h2>
             <p className="text-gray-400 text-lg leading-relaxed">
-              ALFA İNŞAAT olarak sadece bina inşa etmiyoruz; zamanın testine dayanacak mimari şaheserler yaratıyoruz. Yirmi yılı aşkın mükemmellik mirasımızla, vizyoner tasarımları benzersiz işçilik ve detaylara gösterilen özenle hayata geçiriyoruz.
+              SALMAZLAR İNŞAAT olarak sadece bina inşa etmiyoruz; zamanın testine dayanacak mimari şaheserler yaratıyoruz. Yirmi yılı aşkın mükemmellik mirasımızla, vizyoner tasarımları benzersiz işçilik ve detaylara gösterilen özenle hayata geçiriyoruz.
             </p>
           </motion.div>
         </div>
