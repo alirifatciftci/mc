@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight, MapPin, Calendar, Building, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 // Çanakkale TOKİ Projesi Resimleri
 import canakkale1 from '../assets/canakkale/083e4a5f-12bd-4b5f-81d2-2cea765d0bdd.jpg';
@@ -81,6 +82,7 @@ const projectsData = [
 ];
 
 const Projects = () => {
+  const navigate = useNavigate();
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [cardImageIndex, setCardImageIndex] = useState<{[key: number]: number}>({
@@ -223,7 +225,7 @@ const Projects = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: projectsData.length * 0.2 }}
             className="group relative overflow-hidden cursor-pointer h-96"
-            onClick={() => window.location.href = '/contact'}
+            onClick={() => navigate('/contact')}
           >
             {/* Arka Plan Resmi */}
             <div 
