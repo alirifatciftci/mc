@@ -1,7 +1,62 @@
 import { motion } from 'framer-motion';
 import { Building2, Home, Hammer, Wrench, ClipboardCheck, Lightbulb } from 'lucide-react';
+import { useEffect } from 'react';
+import { updatePageSEO, addStructuredData } from '../utils/seo';
 
 const Services = () => {
+  useEffect(() => {
+    // SEO Configuration
+    updatePageSEO({
+      title: 'Hizmetlerimiz | Salmazlar İnşaat - Konut, Villa, TOKİ İnşaatı',
+      description: 'Salmazlar İnşaat hizmetleri: Konut projeleri, TOKİ inşaatları, villa inşaatı, restorasyon, proje yönetimi ve mimari danışmanlık. Profesyonel inşaat çözümleri.',
+      keywords: 'konut inşaatı, villa inşaatı, toki inşaatı, restorasyon, proje yönetimi, mimari danışmanlık, inşaat hizmetleri',
+      canonical: 'https://salmazlarinsaat.com/services',
+      type: 'website'
+    });
+
+    // Structured Data for Services
+    addStructuredData({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "İnşaat Hizmetleri",
+      "provider": {
+        "@type": "Organization",
+        "name": "Salmazlar İnşaat"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Türkiye"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "İnşaat Hizmetleri",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Konut Projeleri"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "TOKİ İnşaatları"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Villa İnşaatı"
+            }
+          }
+        ]
+      }
+    });
+  }, []);
+
   const services = [
     {
       icon: Home,

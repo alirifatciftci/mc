@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Send } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { updatePageSEO, addStructuredData } from '../utils/seo';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,37 @@ const Contact = () => {
     phone: '',
     message: ''
   });
+
+  useEffect(() => {
+    // SEO Configuration
+    updatePageSEO({
+      title: 'İletişim | Salmazlar İnşaat - Bize Ulaşın',
+      description: 'Salmazlar İnşaat ile iletişime geçin. Pendik ofisimizden bize ulaşabilir, proje danışmanlığı alabilirsiniz. E-posta: infosalmazlarinsaat@gmail.com',
+      keywords: 'salmazlar iletişim, inşaat firması iletişim, pendik inşaat iletişim, teklif al, proje danışmanlığı',
+      canonical: 'https://salmazlarinsaat.com/contact',
+      type: 'website'
+    });
+
+    // Structured Data for Contact
+    addStructuredData({
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Salmazlar İnşaat İletişim",
+      "description": "Salmazlar İnşaat iletişim bilgileri ve iletişim formu",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Salmazlar İnşaat",
+        "email": "infosalmazlarinsaat@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Yenişehir Mah. Osmanlı Bul. Çağdaş Center Sitesi B Blok No: 10/1 İç Kapı No: 12",
+          "addressLocality": "Pendik",
+          "addressRegion": "İstanbul",
+          "addressCountry": "TR"
+        }
+      }
+    });
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

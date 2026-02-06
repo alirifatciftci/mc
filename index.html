@@ -6,6 +6,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/src/assets/salmazlogo.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/src/assets/salmazlogo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#ea580c" />
     
     <!-- Primary Meta Tags -->
     <title>Salmazlar İnşaat | İstanbul Pendik İnşaat Firması | TOKİ ve Villa Projeleri</title>
@@ -20,6 +22,8 @@
     <!-- Geo Tags -->
     <meta name="geo.region" content="TR-34" />
     <meta name="geo.placename" content="Pendik, İstanbul" />
+    <meta name="geo.position" content="40.8765;29.2345" />
+    <meta name="ICBM" content="40.8765, 29.2345" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -39,6 +43,10 @@
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://salmazlarinsaat.com/" />
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="dns-prefetch" href="https://images.unsplash.com" />
     
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
@@ -82,7 +90,40 @@
         "@type": "AggregateRating",
         "ratingValue": "5",
         "reviewCount": "10"
-      }
+      },
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "40.8765",
+          "longitude": "29.2345"
+        },
+        "geoRadius": "100000"
+      },
+      "knowsAbout": [
+        "İnşaat",
+        "TOKİ Projeleri",
+        "Villa İnşaatı",
+        "Konut Projeleri",
+        "Mimari Danışmanlık",
+        "Proje Yönetimi"
+      ]
+    }
+    </script>
+    
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://salmazlarinsaat.com/"
+        }
+      ]
     }
     </script>
   </head>

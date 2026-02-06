@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight, MapPin, Calendar, Building, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { updatePageSEO, addStructuredData } from '../utils/seo';
 
 // Çanakkale TOKİ Projesi Resimleri
 import canakkale1 from '../assets/canakkale/083e4a5f-12bd-4b5f-81d2-2cea765d0bdd.jpg';
@@ -91,8 +92,39 @@ const Projects = () => {
     3: 0
   });
 
-  // Kart üzerindeki fotoğrafları otomatik değiştir
+  // SEO ve Kart üzerindeki fotoğrafları otomatik değiştir
   useEffect(() => {
+    // SEO Configuration
+    updatePageSEO({
+      title: 'Projelerimiz | Salmazlar İnşaat - TOKİ, Villa ve Konut Projeleri',
+      description: 'Salmazlar İnşaat tamamlanmış ve devam eden projeleri. Çanakkale TOKİ, Kocaeli Sevindikli Villa, Erzincan Konut projeleri ve daha fazlası. Kaliteli inşaat örnekleri.',
+      keywords: 'salmazlar projeler, çanakkale toki, sevindikli villa, erzincan konut, tamamlanan projeler, villa projeleri, toki projeleri',
+      canonical: 'https://salmazlarinsaat.com/projects',
+      type: 'website'
+    });
+
+    // Structured Data for Projects
+    addStructuredData({
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Salmazlar İnşaat Projeleri",
+      "description": "Tamamlanmış ve devam eden inşaat projeleri",
+      "itemListElement": projectsData.map((project, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "Project",
+          "name": project.title,
+          "description": project.description,
+          "location": {
+            "@type": "Place",
+            "name": project.location
+          },
+          "startDate": project.year
+        }
+      }))
+    });
+
     const interval = setInterval(() => {
       setCardImageIndex(prev => ({
         1: (prev[1] + 1) % projectsData[0].images.length,

@@ -1,7 +1,34 @@
 import { motion } from 'framer-motion';
 import { Award, Users, Target, Shield } from 'lucide-react';
+import { useEffect } from 'react';
+import { updatePageSEO, addStructuredData } from '../utils/seo';
 
 const Corporate = () => {
+  useEffect(() => {
+    // SEO Configuration
+    updatePageSEO({
+      title: 'Kurumsal | Salmazlar İnşaat - Hakkımızda, Vizyonumuz, Misyonumuz',
+      description: 'Salmazlar İnşaat hakkında bilgi edinin. 10+ yıllık tecrübe, kalite standartları, vizyonumuz ve misyonumuz. İstanbul Pendik merkezli güvenilir inşaat firması.',
+      keywords: 'salmazlar hakkında, inşaat firması istanbul, kurumsal, vizyon, misyon, değerlerimiz, pendik inşaat',
+      canonical: 'https://salmazlarinsaat.com/corporate',
+      type: 'website'
+    });
+
+    // Structured Data for Corporate
+    addStructuredData({
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "Salmazlar İnşaat Hakkında",
+      "description": "Salmazlar İnşaat kurumsal bilgileri, vizyon ve misyon",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Salmazlar İnşaat",
+        "foundingDate": "2014",
+        "description": "İstanbul Pendik merkezli profesyonel inşaat firması"
+      }
+    });
+  }, []);
+
   const values = [
     {
       icon: Award,
@@ -169,8 +196,9 @@ const Corporate = () => {
             <div className="relative h-96 rounded-sm overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=90"
-                alt="Construction team"
+                alt="Salmazlar İnşaat Ekibi - Profesyonel İnşaat Çalışması"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
           </motion.div>

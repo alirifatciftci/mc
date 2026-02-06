@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import salmazlarnamelogo from '../assets/salmazlarnamelogo.png';
+import { updatePageSEO, addStructuredData } from '../utils/seo';
 
 const heroImages = [
   {
@@ -26,6 +27,37 @@ const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    // SEO Configuration
+    updatePageSEO({
+      title: 'Salmazlar İnşaat | İstanbul Pendik İnşaat Firması | TOKİ ve Villa Projeleri',
+      description: 'Salmazlar İnşaat, İstanbul Pendik merkezli profesyonel inşaat firması. TOKİ projeleri, villa inşaatı, konut projeleri ve mimari danışmanlık hizmetleri. 10+ yıllık tecrübe ile kaliteli inşaat çözümleri.',
+      keywords: 'salmazlar inşaat, istanbul inşaat, pendik inşaat, toki inşaat, villa inşaatı, konut projeleri, inşaat firması istanbul',
+      canonical: 'https://salmazlarinsaat.com/',
+      type: 'website'
+    });
+
+    // Structured Data
+    addStructuredData({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Salmazlar İnşaat",
+      "url": "https://salmazlarinsaat.com",
+      "logo": "https://salmazlarinsaat.com/src/assets/salmazlarnamelogo.png",
+      "description": "İstanbul Pendik merkezli profesyonel inşaat firması",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Yenişehir Mah. Osmanlı Bul. Çağdaş Center Sitesi B Blok No: 10/1 İç Kapı No: 12",
+        "addressLocality": "Pendik",
+        "addressRegion": "İstanbul",
+        "addressCountry": "TR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "infosalmazlarinsaat@gmail.com",
+        "contactType": "customer service"
+      }
+    });
+
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
     }, 5000);
@@ -65,8 +97,9 @@ const Home = () => {
                 <div className="absolute inset-0 bg-orange-600/10 blur-3xl rounded-full"></div>
                 <img 
                   src={salmazlarnamelogo} 
-                  alt="SALMAZLAR İNŞAAT" 
+                  alt="Salmazlar İnşaat Logo - İstanbul Pendik İnşaat Firması" 
                   className="relative w-96 md:w-[500px] h-auto drop-shadow-2xl"
+                  loading="eager"
                 />
               </div>
           
