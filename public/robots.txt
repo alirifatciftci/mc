@@ -1,0 +1,12 @@
+# robots.txt for salmazlarinsaat.com
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://salmazlarinsaat.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10
